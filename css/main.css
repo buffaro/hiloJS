@@ -106,3 +106,11 @@ a{
     border-style: solid;
     border-color: #3C4EA8 transparent transparent transparent;
 }
+.statusBox{
+    width: 300px;
+    padding: 10px 20px;
+    background-color: aquamarine;
+}
+#status{
+    visibility: hidden;
+}

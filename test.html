@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Page</title>
     <script type="text/javascript" src="./js/test.js"></script>
-    <script type="text/javascript" src="./js/ref.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     
 </head>
 <body>
-    <div id="box"></div>
+    <div id="boxs">
+        <input type="button" id="swordman" value="Swordman" onclick="showStat(this.value)">
+        <input type="button" id="magician" value="Magician" onclick="showStat(this.value)">
+    </div>
+    <div class="statusBox" id="statusBox"></div>
+    <div id="status"></div>
 </body>
 </html>
