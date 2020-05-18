@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folfix : Hospital Management Application</title>
+    <!-- เพิ่ม CSS ที่นี่ -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- เพิ่ม JavaScript ที่นี่ -->
+    <script type="text/javascript" src="./js/main.js"></script>
+</head>
+<body>
+    <h2><u>Hi-Low Javascript</u></h2>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="3"><div class="point">แต้มคงเหลือ = <span id="point">1000</span></div></td>
+            </tr>
+            <tr>
+                <td><div class="rub" id="rubA"></div></td>
+                <td><div class="rub" id="rubB"></div></td>
+                <td><div class="rub" id="rubC"></div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><div class="res">ผล สูง-ต่ำ = <span id="rubSUM"></span></div></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
+            <tr>
+                <h3><u>ทายผล:</u></h3>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" class="putPt">1<span class="tipBox">เต็ง 1<br>แทง 1 ได้ 1</span></a>
+                    <a href="#" class="putPt">2<span class="tipBox">เต็ง 2<br>แทง 1 ได้ 1</span></a>
+                    <a href="#" class="putPt">3<span class="tipBox">เต็ง 3<br>แทง 1 ได้ 1</span></a>
+                    <a href="#" class="putPt">4<span class="tipBox">เต็ง 4<br>แทง 1 ได้ 1</span></a>
+                    <a href="#" class="putPt">5<span class="tipBox">เต็ง 5<br>แทง 1 ได้ 1</span></a>
+                    <a href="#" class="putPt">6<span class="tipBox">เต็ง 6<br>แทง 1 ได้ 1</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" id="low" onclick="putPoint(1)" class="putPt">ต่ำ<span class="tipBox">ต่ำ (4-10)<br>แทง 1 ได้ 2</span></a>
+                    <a href="#" id="high" onclick="putPoint(2)" class="putPt">สูง<span class="tipBox">สูง (11-17)<br>แทง 1 ได้ 2</span></a>
+                    <a href="#" id="iew" onclick="putPoint(3)" class="putPt">เอี่ยว<span class="tipBox">เอี่ยว<br>แทง 1 ได้ 30</span></a>
+                    <a href="#" id="hilo" onclick="putPoint(4)" class="putPt">ไฮโล<span class="tipBox">ไฮโล<br>แทง 1 ได้ 6</span></a>
+                    <a href="#" id="run" onclick="go()" class="roll">เขย่าลูกเต๋า</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+
+    <p id="res"></p>
+</body>
+</html>
