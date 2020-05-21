@@ -3,20 +3,22 @@ var pa = 1000         //แต้มเริ่มต้น
 var txtTh = ["ต่ำ", "สูง", "เอี่ยว", "ไฮโล"]
 var id = ["low", "high", "iew", "hilo", "go"]
 var ptLow = 0, ptHigh = 0, ptIew = 0, ptHilo = 0
-function ref() { //ฟังก์ชั่นสำหรับประกาศตัวแปร
+let ref = () => { //ฟังก์ชั่นสำหรับประกาศตัวแปร
     //ประกาศตัวแปรแสดงผลในปุ่มทายผล
     var low = document.getElementById(id[0])
     var high = document.getElementById(id[1])
     var iew = document.getElementById(id[2])
     var hilo = document.getElementById(id[3])
     var tipBox = document.getElementsByClassName("tipBox")
-} ref()   //ดึงตัวแปรมาใช้ Callback
-function reset(){ //Function Resetค่าเมื่อทอยเต๋า
+}
+ref()   //ดึงตัวแปรมาใช้ Callback
+let reset = () =>{ //Function Resetค่าเมื่อทอยเต๋า
     //ลบค่าแต้มที่แทงไว้
     low.innerHTML = txtTh[0]
     high.innerHTML = txtTh[1]
     iew.innerHTML = txtTh[2]
     hilo.innerHTML = txtTh[3]
+    ptLow = 0, ptHigh = 0, ptIew = 0, ptHilo =0
     //รีเซ็ต CSS
     low.classList.remove('putPtX')
     low.classList.add('putPt')
@@ -28,11 +30,11 @@ function reset(){ //Function Resetค่าเมื่อทอยเต๋า
     hilo.classList.add('putPt')
 }
 
-function cal(a, b, c) { //Function คำนวณผล
+let cal = (a, b, c) => { //Function คำนวณผล
     return a + b + c
 }
 
-function putPoint(obj) { //Function ใส่แต้มเดิมพัน
+let putPoint = (obj) => { //Function ใส่แต้มเดิมพัน
     
     let paX = document.getElementById("point")
     let pt = prompt("กรอกแต้มที่ต้องการเดิมพัน", "")
@@ -112,7 +114,7 @@ function putPoint(obj) { //Function ใส่แต้มเดิมพัน
     }
 }
 
-function go() { //ทอยเต๋าและแสดงผล+คิดแต้ม
+let go = () => { //ทอยเต๋าและแสดงผล+คิดแต้ม
     //สุ่มเต๋า 3 ลูก
     let resA = Math.floor(Math.random() * 6) + 1
     let resB = Math.floor(Math.random() * 6) + 1

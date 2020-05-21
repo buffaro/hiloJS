@@ -10,6 +10,14 @@ var Swordman = {
         dex: 33,
         luk: 1
     },
+    atk: function() {
+        let atk = this.status.str*1.9
+        return atk
+    },
+    matk: function() {
+        let matk = this.status.int*2.3
+        return matk
+    },
     peko: true,
     item: {
         weaponL: "Bastard Sword",
@@ -29,6 +37,14 @@ var Magician = {
         dex: 72,
         luk: 9
     },
+    atk: function() {
+        let atk = this.status.str*1.9
+        return atk
+    },
+    matk: function() {
+        let matk = this.status.int*2.3
+        return matk
+    },
     peko: false,
     item: {
         weaponL: "Arc Wand",
@@ -38,21 +54,23 @@ var Magician = {
     }
 }
 
-var atk = ""
-function showStat(obj){
+let showStat = (obj) => {
     console.log(obj)
+    console.log(typeof(obj))
+    console.log(typeof(Swordman.name))
+    for(let prop in Swordman) {
+        console.log(prop)
+    }
     var stats = document.getElementById("statusBox")
     let statsList = "This's "+obj+" Status <br> Atk: "
     switch(obj){
         case "Swordman":
-            obj = Swordman
-            atk = obj.status.str*1.9
-            stats.innerHTML = statsList+atk
+            stats.innerHTML = statsList+Swordman.atk().toFixed(1)
+            +"<br> Matk: "+Swordman.matk().toFixed(1)
             break
         case "Magician":
-            obj = Magician
-            atk = obj.status.int*1.3
-            stats.innerHTML = statsList+atk
+            stats.innerHTML = statsList+Magician.atk().toFixed(1)
+            +"<br> Matk: "+Magician.matk().toFixed(1)
             break
     }
 }
